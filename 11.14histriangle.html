@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            display: flex;/*将对象作为弹性伸缩盒显示*/
+            align-items: center;/*元素位于容器的中心。*/
+            line-height: 100px;
+            height: 100px;
+        }
+
+        .step {
+
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #ffffff;
+            background: rgb(146, 145, 147);
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .sanjiao {
+            height: 0;
+            width: 0;
+            vertical-align: middle;
+            display: inline-block;
+            border: 25px solid transparent;
+            border-left-color: rgb(146, 145, 147);
+        }
+
+        .wrap:hover .sanjiao {
+            border-left-color: rgb(240, 207, 60);
+        }
+        .wrap:hover .step{
+            background: rgb(240, 207, 60);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="step">
+            step1
+        </div>
+        <div class="sanjiao">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

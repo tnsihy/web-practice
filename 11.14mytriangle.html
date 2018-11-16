@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            float: left;
+            height: 40px;
+            width: 200px;
+            list-style: none;
+            display: block;
+            position: relative;/*设相对位置，方便很多，设距离都一样*/
+        }
+
+        h2 {
+            color: #fff;
+            float: left;
+            text-indent: 40px;
+            padding-top: 3px;
+
+        }
+
+        h6 {
+            color: #fff;
+            text-indent: 10px;
+            padding-top: 13px;
+        }
+
+        a {
+            text-decoration: none;/*下划线去掉*/
+        }
+
+        ul li a:hover{
+            background-color: #F60;
+            color: #fff;/*原先的颜色设置*/
+            display: block;/*要将标签设为块{display:block}先*/
+            height: 40px;
+        }
+        li:hover .wrap1, li:hover .wrap2, li:hover .wrap3{/*鼠标移过时有变化，注意这里的li:hover中li包括了整体*/
+            border-left-color: #F60/*正方形左三角形颜色设置*/
+        }
+
+        .wrap1,.wrap3{/*如何设置一个三角形*/
+            height: 0;
+            width: 0;
+            border:20px solid;/*边框宽度、装饰*/
+            border-color:transparent;/*transparent透明的*/
+            border-left-color:  rgb(155, 140, 140);
+            margin-left:200px;
+            margin-top:-29.5px;/*移动*/
+            position: relative;
+            z-index: 100;/*若没有position: relative;的话，z-index: 100;会失效*/
+
+        }
+
+        .wrap2{
+            height: 0;
+            width: 0;
+            border:20px solid;
+            border-color:transparent;
+            border-left-color:  rgb(240, 207, 60);
+            margin-left:200px;
+            margin-top:-29.5px;
+            position: relative;
+            z-index: 100;
+        }
+        .left,
+        .right {
+            background: rgb(155, 140, 140);
+
+        }
+
+        .center {
+            background: rgb(240, 207, 60);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="left"><a href="#">
+                <h2>1</h2>
+                <h6>STEP 1</h6>
+                <div class="wrap1"></div><!--独立的块，可自由移动-->
+            </a>
+        </li>
+
+        <li class="center"><a href="#">
+                <h2>2</h2>
+                <h6>STEP 2</h6>
+                <div class="wrap2"></div>
+            </a>
+        </li>
+
+        <li class="right"><a href="#">
+                <h2>3</h2>
+                <h6>STEP 3</h6>
+                <div class="wrap3"></div>
+            </a>
+        </li>
+    </ul>
+</body>
+
+</html>
